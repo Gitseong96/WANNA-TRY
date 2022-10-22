@@ -1,5 +1,5 @@
 <div align="center"> <h1> ❔질문에 대한 응답을 바탕으로 식사 메뉴를 추천해주는 웹 서비스❕</h1> <br>
-<img src="/logo-wanna-try-this-white.png" width="50%" height="50%"> <br> <br>
+
 <h2>서비스 링크: [이거머글랭?]</h2> </div>
 <br>
 <br>
@@ -44,12 +44,18 @@
 ### 🔧 사용 스택
 
 - **프론트엔드** <br>
-  <img src="/uploads/dce74004fb755de752fcf17282070fc2/image.png" width="100" height="100"> <img src="/uploads/4e86b4d5e7e073433f48171d2697361c/image.png" width="100" height="100"> <img src="/uploads/8c172852289b00c05ef3f4368a49b0c3/image.png" width="100" height="100">
+1.React
+2.Styled-components
+
 
   
 
 - **백엔드** <br>
-  <img src="/uploads/9fae9428dc189946ac1a5201ee7c2e39/image.png" width="100" height="100"> <img src="/uploads/5f9f94f9d796c9819f4fbc8660be8cc1/image.png" width="100" height="100"> <img src="/uploads/567daf0cc32690c11550bfdaca7d2a09/image.png" width="100" height="100"> <img src="/uploads/3ff8e4ce35bf43a94f25c0a54e9185c4/image.png" width="100" height="100">
+1.Node.js
+2.Express
+3.MongoDB
+4.JEST
+
 
   <br>
   <br>
@@ -76,14 +82,14 @@
   - 사용자는 마이페이지에서 지금까지 추천받은 음식에 대한 통계 데이터를 확인할 수 있다.
   <br>
   <br>
-- **포스트맨** <br>
+<!-- - **포스트맨** <br>
 [<img src="/uploads/d7d75ce5ffc1cf0098d2bf5c05ec65bb/image.png" width="100" height="100">](https://documenter.getpostman.com/view/20119504/UzR1J2S1) 
   <br>
   <br>  
  ### 📑 DevOps
 
 - **애자일 개발 프로세스** <br>
-  [<img src="/uploads/701a1a49463ee10b6f674618177c7a5e/image.png" width="100" height="100">](https://busan-team-5.atlassian.net/jira/software/projects/T5/boards/1?selectedIssue=T5-53) [<img src="/uploads/cbe857ea580236fd8adf7a22d385da8a/image.png" width="100" height="100">](https://kdt-gitlab.elice.io/sw_track/class_02_busan/web_project_2/team5)
+  [<img src="/uploads/701a1a49463ee10b6f674618177c7a5e/image.png" width="100" height="100">](https://busan-team-5.atlassian.net/jira/software/projects/T5/boards/1?selectedIssue=T5-53) [<img src="/uploads/cbe857ea580236fd8adf7a22d385da8a/image.png" width="100" height="100">](https://kdt-gitlab.elice.io/sw_track/class_02_busan/web_project_2/team5) -->
 
 
   <br>
