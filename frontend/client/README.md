@@ -1,6 +1,6 @@
 <div align="center"> <h1> ❔질문에 대한 응답을 바탕으로 식사 메뉴를 추천해주는 웹 서비스❕</h1> <br>
 <!-- <img src="/logo-wanna-try-this-white.png" width="50%" height="50%"> <br> <br> -->
-<h2>서비스 링크: [이거머글랭?]</h2> </div>
+<h2>서비스 : [이거머글랭?]</h2> </div>
 <br>
 <br>
 
