@@ -3,6 +3,7 @@ import { AnswerDataContext } from '../App';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { ContextTypes, AnswerTypeState } from '../Types/context';
 
 const Container = styled.div`
   display: flex;
@@ -44,25 +45,6 @@ const AnswerContainer = styled.div`
 `;
 
 
-// 아래 객채 형태 state 사용을 줄이는 방향으로 리팩토링 예정
-// const obj = [
-//   {
-//     question: '질문1',
-//     answerType: 'age',
-//     answer: [
-//       {
-//         value: 'young',
-//         text: '20대 이하',
-//       },
-//       {
-//         value: 'middle',
-//         text: '30대~40대',
-//       },
-//     ]
-//   },
-
-
-
 const question_list = [
   ['나이를 알려주세요.'],
   ['오늘 기분은 어떤가요?'],
@@ -97,13 +79,13 @@ const Question = () => {
   const [question, setQuestion] = useState(question_list[0][0]);
   const [answers, setAnswer] = useState(answer_list[0]);
   const { setAnswerData, barcount, setBarcount } =
-    useContext(AnswerDataContext);
+    useContext(AnswerDataContext) as ContextTypes
 
-  const onClickSubmit = (e) => {
-    const { name, value } = e.target;
+  const onClickSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const { name, value } = e.currentTarget;
     if (question === question_list[0][0]) {
       setAnswerData((answers) => {
-        let data = { ...answers };
+        let data: any = { ...answers };
         data[name] = value;
         return data;
       });
@@ -112,7 +94,7 @@ const Question = () => {
       setAnswer(answer_list[1]);
     } else if (question === question_list[1][0]) {
       setAnswerData((answers) => {
-        let data = { ...answers };
+        let data: any = { ...answers };
         data[name] = value;
         return data;
       });
@@ -121,7 +103,7 @@ const Question = () => {
       setAnswer(answer_list[2]);
     } else if (question === question_list[2][0]) {
       setAnswerData((answers) => {
-        let data = { ...answers };
+        let data: any = { ...answers };
         data[name] = value;
         return data;
       });
@@ -130,7 +112,7 @@ const Question = () => {
       setAnswer(answer_list[3]);
     } else if (question === question_list[3][0]) {
       setAnswerData((answers) => {
-        let data = { ...answers };
+        let data: any = { ...answers };
         data[name] = value;
         return data;
       });

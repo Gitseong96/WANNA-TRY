@@ -1,15 +1,20 @@
 import styled from 'styled-components';
 import { useContext } from 'react';
 import { AnswerDataContext } from '../App';
+import { ContextTypes } from '../Types/context.js';
 
 function ProgressBar() {
-  const { barcount } = useContext(AnswerDataContext);
+  const { barcount } = useContext(AnswerDataContext) as ContextTypes;
 
   return (
     <Container>
       <Progress width={(barcount / 4) * 100 + '%'} />
     </Container>
   );
+}
+
+interface StyledProps {
+  width: string
 }
 
 const Container = styled.div`
@@ -21,7 +26,7 @@ const Container = styled.div`
   border-radius: 20px;
 `;
 
-const Progress = styled.div`
+const Progress = styled.div<StyledProps>`
   background-color: white;
   width: ${(props) => props.width};
   height: 100%;

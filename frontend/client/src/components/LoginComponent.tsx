@@ -11,11 +11,8 @@ export const LoginComponent = () => {
     {
       onSuccess: (data) => {
         console.log(data);
-        localStorage.setItem('token', data);
-      },
-      onError: (e) => {
-        console.log(e.message);
-      },
+        localStorage.setItem('token', JSON.stringify(data));
+      }
     },
   );
 
@@ -27,8 +24,8 @@ export const LoginComponent = () => {
           src="../login/login-kakao.png"
           alt="카카오 로그인"
           width="200vh"
-          value="kakao"
-          target="_blank"
+        // value="kakao"
+        // target="_blank"
         />
       </a>
       <a
@@ -41,7 +38,7 @@ export const LoginComponent = () => {
           src="../login/login-naver.png"
           alt="네이버 로그인"
           width="200vh"
-          value="naver"
+        // value="naver"
         />
       </a>
       <a

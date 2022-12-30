@@ -10,7 +10,8 @@ import LoadingNaver from './page/LoadingNaver';
 import MyPage from './page/MyPage';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import GlobalStyle from './GlobalStyle';
-export const AnswerDataContext = createContext();
+import { ContextTypes } from './Types/context';
+export const AnswerDataContext = createContext<ContextTypes | null>(null);
 const quertClient = new QueryClient({
   defaultOptions: {
     queries: {

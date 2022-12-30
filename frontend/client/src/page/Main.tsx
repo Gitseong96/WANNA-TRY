@@ -29,7 +29,7 @@ const Character = styled.img`
   bottom: 0;
 `;
 
-const MainButton = styled(motion.div)`
+const MainButton = styled(motion.div) <{ primary: boolean }>`
   display: flex;
   flex-direction: row;
   width: 15rem;

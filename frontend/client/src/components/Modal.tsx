@@ -55,7 +55,7 @@ const Modal = () => {
                   className="kakaoLogo"
                   src="../login/login-kakao.png"
                   alt="카카오 로그인"
-                  value="kakao"
+                // value="kakao"
                 />
               </a>
               <a href="http://kdt-sw2-busan-team05.elicecoding.com:5002/api/auth/naver" rel="noreferrer">
@@ -64,7 +64,7 @@ const Modal = () => {
                   className="naverLogo"
                   src="../login/login-naver.png"
                   alt="네이버 로그인"
-                  value="naver"
+                // value="naver"
                 />
               </a>
               <a href="http://kdt-sw2-busan-team05.elicecoding.com:5002/api/auth/google" rel="noreferrer">
@@ -73,7 +73,7 @@ const Modal = () => {
                   className="googleLogo"
                   src="../login/login-google.png"
                   alt="구글 로그인"
-                  value="google"
+                // value="google"
                 />
               </a>
             </div>

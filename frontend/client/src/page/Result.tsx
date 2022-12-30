@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import SNS from '../components/SNS';
 import Footer from '../components/Footer';
 import { useCookies } from 'react-cookie';
+import { ContextTypes } from '../Types/context';
 const Container = styled.div`
   display: grid;
   position: fixed;
@@ -71,10 +72,10 @@ const BtnCollection = styled.div`
 `;
 
 const Result = () => {
-  const { answerData } = useContext(AnswerDataContext);
+  const { answerData } = useContext(AnswerDataContext) as ContextTypes;
   const [cookies] = useCookies(['jwtToken']);
   const token = cookies.jwtToken;
-  const onClickFood = async (foodId) => {
+  const onClickFood = async (foodId: string) => {
     const addFood = {
       addFoodId: foodId,
     };
@@ -102,25 +103,25 @@ const Result = () => {
   if (isLoading) {
     return <h1>로딩중</h1>;
   }
-  if (isError) {
-    return <h1>{error}</h1>;
-  }
+  // if (isError) {
+  //   return <h1>{error}</h1>;
+  // }
 
-  const randomNum = Math.floor(Math.random() * data.data.length);
-  console.log(data.data[randomNum]._id);
+  const randomNum = Math.floor(Math.random() * data?.data.length);
+  console.log(data?.data[randomNum]._id);
   return (
     <>
       <Container>
         <ResultBox>
           {
             <div>
-              <FoodImg src={data.data[randomNum].img} />
+              <FoodImg src={data?.data[randomNum].img} />
               <ResultText>
-                <div key={data.data[randomNum].name}>
-                  {data.data[randomNum].name}
+                <div key={data?.data[randomNum].name}>
+                  {data?.data[randomNum].name}
                 </div>
-                <span key={data.data[randomNum].comment}>
-                  {data.data[randomNum].comment}
+                <span key={data?.data[randomNum].comment}>
+                  {data?.data[randomNum].comment}
                 </span>
               </ResultText>
             </div>
@@ -130,7 +131,7 @@ const Result = () => {
           <Link to="/">
             <BtnCollection
               onClick={() => {
-                onClickFood(data.data[randomNum]._id);
+                onClickFood(data?.data[randomNum]._id);
               }}
             >
               이 메뉴로 결정하기

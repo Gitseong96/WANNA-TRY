@@ -15,7 +15,7 @@ const Container = styled.div`
 `;
 
 const MyPage = () => {
-  const { data, isError, error } = useQuery(
+  const { data } = useQuery(
     'userID',
     async () => {
       const response = await axios.get(
@@ -28,9 +28,9 @@ const MyPage = () => {
       onSuccess: (data) => {
         return data;
       },
-      onError: (e) => {
-        console.log(e.message);
-      },
+      // onError: (e) => {
+      //   console.log(e.message);
+      // },
 
     },
   );
