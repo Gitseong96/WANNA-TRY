@@ -19,13 +19,13 @@ const SNSIcon = styled.img`
   padding: 1rem;
 `;
 
-const ShareTwitter = () => {
-  const sendText = '오늘 먹을 것!';
-  let sendUrl = ' url ';
-  window.open(
-    'https://twitter.com/intent/tweet?text=' + sendText + '&url=' + sendUrl,
-  );
-};
+// const ShareTwitter = () => {
+//   const sendText = '오늘 먹을 것!';
+//   let sendUrl = ' url ';
+//   window.open(
+//     'https://twitter.com/intent/tweet?text=' + sendText + '&url=' + sendUrl,
+//   );
+// };
 
 const SNS = () => {
   return (

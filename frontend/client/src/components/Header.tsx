@@ -38,8 +38,8 @@ const NickNameContainer = styled.div`
 const Header = () => {
   const path_list = ['/', '/Survey', '/Result', 'MyPage'];
   const [cookies, removeCookie] = useCookies(['jwtToken']);
-  const [isLoginNow, setIsLoginNow] = useState(false);
-  const [userId, setUserId] = useState("")
+  const [isLoginNow, setIsLoginNow] = useState<boolean>(false);
+  const [userId, setUserId] = useState<string>("")
   const token = cookies.jwtToken;
 
 
@@ -66,9 +66,9 @@ const Header = () => {
   if (path_list.find((path) => path === window.location.pathname) === undefined)
     return null;
 
-  // const userLogout = async () => {
-  //   return removeCookie('jwtToken');
-  // };
+  const userLogout = async () => {
+    return removeCookie('jwtToken', null);
+  };
 
   return (
     <Container>
@@ -77,7 +77,7 @@ const Header = () => {
         <NickNameContainer>
           {userId}{isLoginNow ? "님 하이" : null}
         </NickNameContainer>
-        {/* {isLoginNow ? <button onClick={userLogout}>Log Out</button> : <Modal />} */}
+        {isLoginNow ? <button onClick={userLogout}>Log Out</button> : <Modal />}
       </LoginContainer>
     </Container>
   );
