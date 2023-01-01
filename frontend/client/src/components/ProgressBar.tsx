@@ -1,14 +1,13 @@
 import styled from 'styled-components';
-import { useContext } from 'react';
-import { AnswerDataContext } from '../App';
-import { ContextTypes } from '../Types/context.js';
+import { useSelector } from 'react-redux';
+import { InitialStateType } from '../redux/AnswerRudux';
 
 function ProgressBar() {
-  const { barcount } = useContext(AnswerDataContext) as ContextTypes;
-
+  const bar = useSelector((state: InitialStateType) => state.result.bar)
+  // const bar = anwerResult.result.bar
   return (
     <Container>
-      <Progress width={(barcount / 4) * 100 + '%'} />
+      <Progress width={(bar / 4) * 100 + '%'} />
     </Container>
   );
 }

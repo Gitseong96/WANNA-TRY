@@ -27,7 +27,7 @@ const Container = styled.div`
   z-index: 999;
 `;
 const Modal = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState<boolean>(true);
   const openModalHandler = () => {
     setIsOpen(!isOpen);
   };
