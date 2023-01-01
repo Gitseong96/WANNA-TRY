@@ -3,6 +3,7 @@
     1. 불안전한 타입을 TypeScript를 통해 정의
     2. 재사용 가능한 컴포넌트로 만들기 위해
     3. 기존에 react Hook을 통해 관리하던 상태  redux를 통해 전역 상태관리
+    4. 추가로 코드정리 예정
 
 ## 2-1. reactJs => reactTs
       * npm install --save typescript @types/node @types/react @types/react-dom @types/jest를 통해 typescript로 전환
