@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import { AnswerType, initialData } from "../redux/Data";
 import AnswerCreator, { TypeAnswer } from "../redux/ActionCreator";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 export const useQuestion = () => {
 
     const dispatch = useDispatch();
@@ -56,6 +56,8 @@ export const useQuestion = () => {
             setAnswerType(initialData.data[2].answerType)
             decrementBarCount()
         }
+
     };
+
     return { onClickBack, onClickSubmit, answers, answerType, question }
 }

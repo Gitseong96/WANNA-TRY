@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import Icon from './LoginIcon';
 const BackGround = styled.div`
   background: #00000082;
@@ -28,13 +27,11 @@ const Container = styled.div`
 `;
 const Modal = () => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
-  const openModalHandler = () => {
-    setIsOpen(!isOpen);
-  };
+
   return (
     <>
       <div>
-        <button onClick={openModalHandler}>
+        <button onClick={() => setIsOpen(!isOpen)}>
           {!isOpen ? 'close' : 'Log In'}
         </button>
         {!isOpen ? (
