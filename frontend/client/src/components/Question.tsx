@@ -36,7 +36,7 @@ const Question = () => {
           whileTap={{ borderRadius: '50%' }}
           onClick={onClickSubmit}
           key={`answer+${idx}`}
-          value={answer.value}
+          value={answerType}
           name={answer.text}
         >
           {answer.text}

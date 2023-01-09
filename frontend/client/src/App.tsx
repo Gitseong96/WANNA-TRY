@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Main from './page/Main';
-// import Result from './page/Result';
+import Result from './page/Result';
 import NotFound from './page/NotFound';
 import Survey from './page/Survey';
 import Loading from './page/Loading';
@@ -28,7 +28,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Main />}></Route>
             <Route path="/Survey" element={<Survey />}></Route>
-            {/* <Route path="/Result" element={<Result />}></Route> */}
+            <Route path="/Result" element={<Result />}></Route>
             <Route path="/Loading" element={<Loading />}></Route>
             <Route path="/LoadingNaver" element={<LoadingNaver />}></Route>
             <Route path="/MyPage" element={<MyPage />}></Route>
